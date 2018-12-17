@@ -17,11 +17,13 @@ let btn_menu = document.getElementById('btn-menu'),
     $(document).ready(function(){
         $('.slider-one').owlCarousel({
             rtl:false,
+            
             loop:true,
-            autoplay:true,
+            autoplay:false,
             autoplayTimeout:5000,
             margin:10,
-            nav:false,
+            animateOut: 'fadeOut',
+            nav:true,
             responsive:{
                 0:{
                     items:1
@@ -46,10 +48,11 @@ let btn_menu = document.getElementById('btn-menu'),
     $(".slide-two").owlCarousel({
 		loop:true, //Зацикливаем слайдер
 		margin:10, //Отступ от картино если выводите больше 1
-		nav:false, //Отключил навигацию
+		nav: true, //Отключил навигацию
 		autoplay:false, //Автозапуск слайдера
-		smartSpeed:2000, //Время движения слайда
-		autoplayTimeout:4000, //Время смены слайда
+        smartSpeed:2000, //Время движения слайда
+        dots: false,
+        autoplayTimeout:4000, //Время смены слайда
 		responsive:{ //Адаптация в зависимости от разрешения экрана
 			0:{
 				items:1
